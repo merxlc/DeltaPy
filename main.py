@@ -12,5 +12,10 @@ from tunnel import *
 #root.base['Printme'].set_var('counter', root.base['Counter'])
 
 root.add_node(World, 'world')
+root.add_node(Square, 'player')
+
+root.world['Map'].set_var('objects', root.world['Map'].objects + [])
+
+root.world.add_node(Camera, 'main_camera')
 
 start()

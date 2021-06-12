@@ -7,6 +7,12 @@ class Empty(Node):
 class World(Node):
     def set_scripts(self):
         self.scripts = {}
-        self.add_script(Counter)
-        self.add_script(Printme)
-        self['Printme'].set_var('counter', self['Counter'])
+        self.add_script(Map)
+
+class Camera(Node):
+    def set_scripts(self):
+        self.scripts = {}
+        self.add_script(CameraView)
+        self.add_script(Transform)
+    def setup(self):
+        self.world = ""
